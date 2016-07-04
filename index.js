@@ -28,7 +28,7 @@ function buildInspectorUrl(inspectorHost, inspectorPort, debugPort, isHttps) {
     protocol: protocol,
     hostname: host,
     port: port,
-    pathname: '/',
+    pathname: '/debug/',
     search: '?port=' + debugPort
   };
 
@@ -47,7 +47,7 @@ function buildWebSocketUrl(inspectorHost, inspectorPort, debugPort, isSecure) {
     protocol: isSecure ? 'wss:' : 'ws:',
     hostname: inspectorHost == '0.0.0.0' ? '127.0.0.1' : inspectorHost,
     port: inspectorPort,
-    pathname: '/',
+    pathname: '/debug/',
     search: '?port=' + debugPort,
     slashes: true
   };
