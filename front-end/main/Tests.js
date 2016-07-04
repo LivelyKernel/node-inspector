@@ -945,5 +945,6 @@ return TestSuite;
 
 }
 
-if (window.parent && window.parent.uiTests)
-    window.parent.uiTests.testSuiteReady(createTestSuite);
+// Do not try to access window.parent (throws security warning in iFrames)
+// if (window.parent && window.parent.uiTests)
+//     window.parent.uiTests.testSuiteReady(createTestSuite);
